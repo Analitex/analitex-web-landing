@@ -1,0 +1,116 @@
+.coming-soon-page {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.brand {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  width: fit-content;
+  color: #082f49;
+  font-size: 1rem;
+  font-weight: 780;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 8px;
+  color: #f0f9ff;
+  background: #0369a1;
+}
+
+.coming-soon-banner {
+  align-self: center;
+  justify-self: center;
+  width: min(720px, 100%);
+  padding: 48px 24px 72px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(186 230 253 / 80%);
+  border-radius: 8px;
+  padding: 7px 11px;
+  color: #0369a1;
+  font-size: 0.86rem;
+  font-weight: 720;
+  background: rgb(255 255 255 / 76%);
+}
+
+h1 {
+  margin: 24px 0 0;
+  color: #082f49;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 780;
+  letter-spacing: 0;
+  line-height: 0.96;
+}
+
+p {
+  max-width: 590px;
+  margin: 24px auto 0;
+  color: #315267;
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.6;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contact-link,
+.telegram-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #0369a1;
+  font-weight: 760;
+  text-decoration: none;
+  background: rgb(255 255 255 / 72%);
+}
+
+.telegram-link {
+  gap: 8px;
+}
+
+.contact-link:hover,
+.telegram-link:hover {
+  border-color: #0ea5e9;
+  background: #ffffff;
+}
+
+.telegram-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (max-width: 640px) {
+  .coming-soon-page {
+    padding: 18px;
+  }
+
+  .coming-soon-banner {
+    padding-inline: 0;
+  }
+}
