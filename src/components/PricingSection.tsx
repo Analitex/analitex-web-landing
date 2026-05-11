@@ -11,7 +11,7 @@ export function PricingSection() {
       <div className="pricing-head">
         <div>
           <span className="eyebrow">Тарифы</span>
-          <h2>Простые планы под масштаб вашей операции.</h2>
+          <h2>Планы под текущий масштаб продаж.</h2>
         </div>
         <div className="billing-toggle" aria-label="Период оплаты">
           <button className={!annual ? 'active' : ''} type="button" onClick={() => setAnnual(false)}>Месяц</button>
@@ -29,7 +29,7 @@ export function PricingSection() {
                 <li key={feature}>{feature}</li>
               ))}
             </ul>
-            <a href="#demo">{plan.highlighted ? 'Масштабировать продажи' : 'Выбрать тариф'}</a>
+            <a href="#demo">{plan.highlighted ? 'Запросить Growth' : 'Обсудить тариф'}</a>
           </article>
         ))}
       </div>

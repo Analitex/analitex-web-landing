@@ -3,7 +3,7 @@ import { customerSegments } from '../content/landing'
 export function LogoBand() {
   return (
     <section className="logo-band" aria-label="Сегменты клиентов">
-      <span>Для команд в категориях</span>
+      <span>Собрано для команд, где продажи уже нельзя держать в разрозненных таблицах</span>
       {customerSegments.map((segment) => (
         <strong key={segment}>{segment}</strong>
       ))}

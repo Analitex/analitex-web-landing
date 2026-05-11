@@ -2,9 +2,9 @@ const footerGroups = [
   {
     title: 'Платформа',
     links: [
-      { label: 'AI-копилот', href: '#automation' },
+      { label: 'AI-копилот', href: '#platform' },
       { label: 'Юнит-экономика', href: '#platform' },
-      { label: 'Прогноз поставок', href: '#automation' },
+      { label: 'Прогноз поставок', href: '#workflow' },
       { label: 'Тарифы', href: '#pricing' },
     ],
   },
@@ -22,8 +22,8 @@ const footerGroups = [
     links: [
       { label: 'Демо', href: '#demo' },
       { label: 'FAQ', href: '#faq' },
-      { label: 'Партнерство', href: 'mailto:partners@analitex.ai' },
-      { label: 'Поддержка', href: 'mailto:support@analitex.ai' },
+      { label: 'Партнерство', href: 'mailto:social@analitex.ru' },
+      { label: 'Поддержка', href: 'mailto:social@analitex.ru' },
     ],
   },
 ]
@@ -34,11 +34,11 @@ export function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <a className="brand" href="#top" aria-label="Analitex">
-            <span className="brand-mark">A</span>
+            <span className="brand-mark" aria-hidden="true">A</span>
             <span>Analitex</span>
           </a>
-          <p>AI-операционная система для селлеров, которым нужна прибыль, а не еще один набор таблиц.</p>
-          <a className="footer-mail" href="mailto:demo@analitex.ai">demo@analitex.ai</a>
+          <p>Сервис оцифровки продаж на маркетплейсах для команд, которым нужна управляемая прибыль.</p>
+          <a className="footer-mail" href="mailto:social@analitex.ru">social@analitex.ru</a>
         </div>
         <div className="footer-links">
           {footerGroups.map((group) => (

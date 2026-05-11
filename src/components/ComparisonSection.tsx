@@ -4,8 +4,8 @@ import { SectionHeading } from './SectionHeading'
 export function ComparisonSection() {
   return (
     <section className="section results-section" id="results">
-      <SectionHeading eyebrow="Результат" title="Сразу видно, что исправить в первую очередь.">
-        Analitex показывает простые сигналы: где теряется маржа, какая реклама не окупается и какие товары требуют внимания.
+      <SectionHeading eyebrow="Эффект" title="Сразу видно, что исправить в первую очередь.">
+        Analitex показывает, где теряется маржа, какая реклама не окупается и какие товары требуют внимания до того, как проблема станет дорогой.
       </SectionHeading>
       <div className="result-grid">
         {decisionCards.map((card) => (

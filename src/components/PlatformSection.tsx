@@ -4,8 +4,8 @@ import { SectionHeading } from './SectionHeading'
 export function PlatformSection() {
   return (
     <section className="section tools-section" id="platform">
-      <SectionHeading eyebrow="Инструменты" title="Все важное для роста продаж. Без лишней сложности.">
-        Выберите задачу, подключите кабинеты и смотрите понятные рекомендации вместо десятков выгрузок.
+      <SectionHeading eyebrow="Платформа" title="Одна операционная панель для маркетплейсов.">
+        Analitex связывает ежедневные данные с экономикой бизнеса: от SKU и кампаний до поставок, цены и чистой прибыли.
       </SectionHeading>
       <div className="tools-grid">
         {operatingModules.map((tool) => (
