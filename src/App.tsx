@@ -16,6 +16,17 @@ import {
 } from './content/landing'
 import { formatPrice } from './utils/pricing'
 
+const links = {
+  site: 'https://analitex.ru',
+  app: 'https://app.analitex.ru',
+  docs: {
+    privacyPolicy: 'https://docs.analitex.ru/docs/legal/privacy_policy',
+    termsOfUse: 'https://docs.analitex.ru/docs/legal/terms_of_use',
+    publicOffer: 'https://docs.analitex.ru/docs/legal/public_offer',
+    personalDataConsent: 'https://docs.analitex.ru/docs/legal/personal_data_consent',
+  },
+}
+
 function App() {
   return (
     <div className="site-shell">
@@ -41,7 +52,7 @@ function App() {
 function Header() {
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Analitex">
+      <a className="brand" href={links.site} aria-label="Analitex">
         <span className="brand-name">Analitex</span>
         <span className="brand-badge">PRO</span>
       </a>
@@ -53,8 +64,8 @@ function Header() {
         ))}
       </nav>
       <div className="header-actions">
-        <a className="login-link" href="mailto:social@analitex.ru">Войти</a>
-        <a className="trial-button" href="#demo">Попробовать</a>
+        <a className="login-link" href={links.app}>Войти</a>
+        <a className="trial-button" href={links.app}>Попробовать</a>
       </div>
     </header>
   )
@@ -69,7 +80,7 @@ function Hero() {
           Сервис аналитики для маркетплейсов: прибыль, реклама, остатки и рекомендации в одном аккуратном интерфейсе для селлеров и команд роста.
         </p>
         <div className="hero-actions">
-          <a className="primary-button" href="#demo">Подключить кабинет</a>
+          <a className="primary-button" href={links.app}>Подключить кабинет</a>
           <a className="secondary-button" href="#features">Смотреть платформу</a>
         </div>
       </div>
@@ -186,7 +197,7 @@ function FeatureStory() {
           ))}
         </ul>
         <div className="inline-actions">
-          <a className="primary-button small" href="#demo">Стартовать</a>
+          <a className="primary-button small" href={links.app}>Стартовать</a>
           <a className="text-link" href="mailto:social@analitex.ru">Связаться</a>
         </div>
       </div>
@@ -334,7 +345,7 @@ function Pricing() {
                 <li key={feature}>{feature}</li>
               ))}
             </ul>
-            <a href="#demo">{plan.highlighted ? 'Попробовать Growth' : 'Выбрать тариф'}</a>
+            <a href={links.app}>{plan.highlighted ? 'Попробовать Growth' : 'Выбрать тариф'}</a>
           </article>
         ))}
       </div>
@@ -364,7 +375,12 @@ function ClosingCta() {
     <section className="closing-section" id="demo">
       <h2>Build faster marketplace teams.</h2>
       <p>Подключите Analitex и начните видеть прибыль, рекламу и остатки без ручных отчетов.</p>
-      <a className="cta-white-button" href="mailto:social@analitex.ru">Запросить демо</a>
+      <a className="cta-white-button" href={links.app}>Запросить демо</a>
+      <small>
+        Нажимая кнопку, вы соглашаетесь с{' '}
+        <a href={links.docs.personalDataConsent} target="_blank" rel="noreferrer">согласием на обработку данных</a>
+        .
+      </small>
     </section>
   )
 }
@@ -373,7 +389,7 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div>
-        <a className="brand" href="#top" aria-label="Analitex">
+        <a className="brand" href={links.site} aria-label="Analitex">
           <span className="brand-name">Analitex</span>
           <span className="brand-badge">PRO</span>
         </a>
@@ -384,7 +400,13 @@ function Footer() {
         <a href="#features">Возможности</a>
         <a href="#pricing">Тарифы</a>
         <a href="#faq">FAQ</a>
-        <a href="#demo">Демо</a>
+        <a href={links.app}>Войти в сервис</a>
+      </nav>
+      <nav aria-label="Документы">
+        <a href={links.docs.privacyPolicy} target="_blank" rel="noreferrer">Политика конфиденциальности</a>
+        <a href={links.docs.termsOfUse} target="_blank" rel="noreferrer">Пользовательское соглашение</a>
+        <a href={links.docs.publicOffer} target="_blank" rel="noreferrer">Публичная оферта</a>
+        <a href={links.docs.personalDataConsent} target="_blank" rel="noreferrer">Согласие на обработку данных</a>
       </nav>
       <span>© 2026 Analitex. Все права защищены.</span>
     </footer>
