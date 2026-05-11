@@ -7,7 +7,6 @@ import {
   featureTiles,
   heroStats,
   marketplaces,
-  navLinks,
   operatingModules,
   pricingPlans,
   supportFeatures,
@@ -26,6 +25,13 @@ const links = {
     personalDataConsent: 'https://docs.analitex.ru/docs/legal/personal_data_consent',
   },
 }
+
+const headerLinks = [
+  { href: links.site, label: 'Сайт' },
+  { href: links.app, label: 'Приложение' },
+  { href: links.docs.termsOfUse, label: 'Документы', external: true },
+  { href: 'mailto:social@analitex.ru', label: 'Контакты' },
+]
 
 function App() {
   return (
@@ -57,8 +63,8 @@ function Header() {
         <span className="brand-badge">PRO</span>
       </a>
       <nav className="site-nav" aria-label="Разделы страницы">
-        {navLinks.map((link) => (
-          <a href={link.href} key={link.href}>
+        {headerLinks.map((link) => (
+          <a href={link.href} key={link.href} target={link.external ? '_blank' : undefined} rel={link.external ? 'noreferrer' : undefined}>
             {link.label}
           </a>
         ))}
@@ -81,7 +87,7 @@ function Hero() {
         </p>
         <div className="hero-actions">
           <a className="primary-button" href={links.app}>Подключить кабинет</a>
-          <a className="secondary-button" href="#features">Смотреть платформу</a>
+          <a className="secondary-button" href={links.site}>Смотреть платформу</a>
         </div>
       </div>
       <div className="hero-art" aria-hidden="true">
@@ -213,8 +219,8 @@ function FeatureStory() {
           ))}
         </ul>
         <div className="inline-actions">
-          <a className="primary-button small" href="#pricing">Тарифы</a>
-          <a className="text-link" href="#faq">FAQ</a>
+          <a className="primary-button small" href={links.app}>Тарифы</a>
+          <a className="text-link" href={links.docs.termsOfUse} target="_blank" rel="noreferrer">Условия</a>
         </div>
       </div>
       <div className="story-visual visual-dashboard" aria-hidden="true">
@@ -397,9 +403,9 @@ function Footer() {
         <a href="mailto:social@analitex.ru">social@analitex.ru</a>
       </div>
       <nav aria-label="Футер">
-        <a href="#features">Возможности</a>
-        <a href="#pricing">Тарифы</a>
-        <a href="#faq">FAQ</a>
+        <a href={links.site}>Сайт</a>
+        <a href={links.app}>Приложение</a>
+        <a href="mailto:social@analitex.ru">Контакты</a>
         <a href={links.app}>Войти в сервис</a>
       </nav>
       <nav aria-label="Документы">

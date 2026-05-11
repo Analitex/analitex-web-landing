@@ -1,10 +1,3 @@
-export const navLinks = [
-  { href: '#features', label: 'Возможности' },
-  { href: '#cases', label: 'Кейсы' },
-  { href: '#pricing', label: 'Тарифы' },
-  { href: '#faq', label: 'FAQ' },
-]
-
 export const marketplaces = ['Wildberries', 'Ozon', 'Яндекс Маркет', 'Мегамаркет']
 
 export const heroStats = [
